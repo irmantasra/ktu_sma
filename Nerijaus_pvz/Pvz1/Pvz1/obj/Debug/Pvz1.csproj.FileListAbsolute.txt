@@ -1,0 +1,26 @@
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.csprojAssemblyReference.cache
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.Form1.resources
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.Properties.Resources.resources
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.GenerateResource.cache
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CoreCompileInputs.cache
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\bin\Debug\Pvz1.exe.config
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\bin\Debug\Pvz1.exe
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\bin\Debug\Pvz1.pdb
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.dll
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.xml
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.exe
+C:\Users\Nerijus\Desktop\Mano\Studijos\Skaitiniai metodai\Pvz1\Pvz1\obj\Debug\Pvz1.pdb
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.exe.config
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.exe
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.pdb
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.dll
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.xml
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csprojAssemblyReference.cache
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.Form1.resources
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.Properties.Resources.resources
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.GenerateResource.cache
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CoreCompileInputs.cache
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.exe
+C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.pdb
