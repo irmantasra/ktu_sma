@@ -24,3 +24,15 @@ C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_
 C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
 C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.exe
 C:\Users\Irmantas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.pdb
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.exe.config
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.exe
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\Pvz1.pdb
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.dll
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\bin\Debug\MathNet.Numerics.xml
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csprojAssemblyReference.cache
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.Form1.resources
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.Properties.Resources.resources
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.GenerateResource.cache
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.exe
+C:\Projects\ktu_sma\Nerijaus_pvz\Pvz1\Pvz1\obj\Debug\Pvz1.pdb

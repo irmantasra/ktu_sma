@@ -100,3 +100,15 @@ D:\StudijosKTU\2019m. III kursas\Studies\ktu_studies_19\skaitiniai_metodai_algor
 D:\StudijosKTU\2019m. III kursas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Pvz1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
 D:\StudijosKTU\2019m. III kursas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Pvz1\Pvz1\obj\Debug\Pvz1.exe
 D:\StudijosKTU\2019m. III kursas\Studies\ktu_studies_19\skaitiniai_metodai_algoritmai\Pvz1\Pvz1\obj\Debug\Pvz1.pdb
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\bin\Debug\Pvz1.exe.config
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\bin\Debug\Pvz1.exe
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\bin\Debug\Pvz1.pdb
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\bin\Debug\MathNet.Numerics.dll
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\bin\Debug\MathNet.Numerics.xml
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.csprojAssemblyReference.cache
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.Form1.resources
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.Properties.Resources.resources
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.csproj.GenerateResource.cache
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.csproj.CopyComplete
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.exe
+C:\Projects\ktu_sma\irmram_lab1\Pvz1\obj\Debug\Pvz1.pdb

@@ -29,12 +29,12 @@ namespace Pvz1
         // ---------------------------------------------- STYGU METODAS ----------------------------------------------
 
         double x1, x2, xtemp, k; // izoliacijos intervalo pradžia ir galas, vidurio taškas, koeficientas
-        int N = 1000; // maksimalus iteracijų skaičius
+        int N = 100; // maksimalus iteracijų skaičius
         int iii; // iteracijos numeris
         private double stepSize = 0.1;
+        double nearest = 0;
 
-        Series Fx, X1X2, XMid; // naudojama atvaizduoti f-jai, šaknų rėžiams ir vidiniams taškams
-
+        Series Fx, X1X2, XMid, Gx, XY; // naudojama atvaizduoti f-jai, šaknų rėžiams ir vidiniams taškams
 
         /// <summary>
         /// Sprendžiama lygtis F(x) = 0
@@ -54,6 +54,42 @@ namespace Pvz1
             }
             return 0;
         }
+
+        private double G(double x)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    return (double)(x - ((-0.7 * Math.Pow(x, 4) + 4.16 * Math.Pow(x, 3) + 1.19 * Math.Pow(x, 2) - 33.4 * x + 31.51) / (-2.8 * Math.Pow(x, 3) + 12.48 * Math.Pow(x, 2) + 2.38 * x - 33.4)));
+                case 1:
+                    return (double)(x - ((Math.Pow(Math.E, Math.Sin(x)) - x / 10) / (Math.Pow(Math.E, Math.Sin(x)) * Math.Cos(x) - 0.1)));
+                case 2:
+                    return (double)(x- ((Math.Pow(x, 3) - (3 * Math.Pow(x, 2)) + (double)(1.5 / Math.PI)) / (3 * Math.Pow(x, 2) - 6 * x)));
+            }
+            return 0;
+        }
+
+        //private double dG(double x)
+        //{
+        //    switch (comboBox1.SelectedIndex)
+        //    {
+        //        case 0:
+        //            return (double)(1 - 
+        //                ((1.96 * Math.Pow(x, 6)
+        //                - 17.472 * Math.Pow(x, 5)
+        //                + 50.2508 * Math.Pow(x, 4)
+        //                - 73.7184 * Math.Pow(x, 3)
+        //                + 267.5162 * Math.Pow(x, 2)
+        //                - 865.9816 * x + 1040.5662) / 
+        //                Math.Pow(-2.8 * Math.Pow(x, 3) + 12.48 * Math.Pow(x, 2) + 2.38 * x - 33.4, 2)
+        //                ));
+        //        case 1:
+        //            return (double)(10 * Math.Pow(Math.E, Math.Sin(x)) * Math.Cos(x));
+        //        case 2:
+        //            return (double)(3 * Math.Pow(x, 2) - (6 * x) + 1);
+        //    }
+        //    return 0;
+        //}
 
         private Queue<Tuple<double, double>> int1 = new Queue<Tuple<double, double>>();
         private Queue<Tuple<double, double>> int2 = new Queue<Tuple<double, double>>();
@@ -81,12 +117,13 @@ namespace Pvz1
 
             comboBox1.SelectedIndex = 0;
             x1 = -3;
-            x2 = 10;
+            x2 = 5;
             var xTemp = x1;
             for (x1 += stepSize; x1 < x2; x1 += stepSize)
             {
                 if (Math.Sign(F(x1)) != Math.Sign(F(xTemp)))
                 {
+                    Console.WriteLine("{0}  {1}",xTemp, x1);
                     int1.Enqueue(new Tuple<double, double>(xTemp, x1));
                 }
 
@@ -94,13 +131,14 @@ namespace Pvz1
             }
 
             comboBox1.SelectedIndex = 1;
-            x1 = 0;
-            x2 = 5;
+            x1 = 1;
+            x2 = 15;
             xTemp = x1;
             for (x1 += stepSize; x1 < x2; x1 += stepSize)
             {
                 if (Math.Sign(F(x1)) != Math.Sign(F(xTemp)))
                 {
+                    Console.WriteLine("{0}  {1}", xTemp, x1);
                     int2.Enqueue(new Tuple<double, double>(xTemp, x1));
                 }
 
@@ -108,13 +146,14 @@ namespace Pvz1
             }
 
             comboBox1.SelectedIndex = 2;
-            x1 = -3;
-            x2 = 10;
+            x1 = -1;
+            x2 = 4;
             xTemp = x1;
             for (x1 += stepSize; x1 < x2; x1 += stepSize)
             {
                 if (Math.Sign(F(x1)) != Math.Sign(F(xTemp)))
                 {
+                    Console.WriteLine("{0}  {1}", xTemp, x1);
                     int3.Enqueue(new Tuple<double, double>(xTemp, x1));
                 }
 
@@ -122,12 +161,11 @@ namespace Pvz1
             }
         }
 
-
         // Mygtukas "Pusiaukirtos metodas" - ieškoma šaknies, ir vizualizuojamas paieškos procesas
         private void button3_Click(object sender, EventArgs e)
         {
             ClearForm(); // išvalomi programos duomenys
-            PreparareForm(-4, 5, -10, 10);
+            prepareForm();
             x1 = -3; // izoliacijos intervalo pradžia
             x2 = -2; // izoliacijos intervalo galas
             iii = 0; // iteraciju skaičius
@@ -218,7 +256,7 @@ namespace Pvz1
         private void button5_Click(object sender, EventArgs e)
         {
             ClearForm(); // išvalomi programos duomenys
-            PreparareForm(-10, 10, -10, 10);
+            prepareForm();
             data.Clear();
             // apskaičiuojamos funkcijos reikšmės
             for (int i = 0; i < 400; i++)
@@ -326,14 +364,179 @@ namespace Pvz1
 
         private void button7_Click(object sender, EventArgs e)
         {
+            ClearForm();
 
+            double x = -8;
+            int i = 0;
+            prepareForm();
+            switch (comboBox1.SelectedIndex)
+            {
+                case 2:
+                    i = 1;
+                    break;
+            }
+
+            richTextBox1.AppendText("Iteracija         x            F(x)        x1          x2          F(x1)         F(x2)       \n");
+
+            Fx = chart1.Series.Add("F(x)");
+            Fx.ChartType = SeriesChartType.Line;
+            Gx = chart1.Series.Add("G(x)");
+            Gx.ChartType = SeriesChartType.Line;
+            XY = chart1.Series.Add("y = x");
+            XY.ChartType = SeriesChartType.Line;
+            for (; i < 300; i++)
+            {
+                Fx.Points.AddXY(x, F(x));
+                Gx.Points.AddXY(x, G(x));
+                XY.Points.AddXY(x, x); x = x + (2 * Math.PI) / 50;
+            }
+            Fx.BorderWidth = 3;
+            Gx.BorderWidth = 3;
+            XY.BorderWidth = 3;
+
+            X1X2 = chart1.Series.Add("X1X2");
+            X1X2.MarkerStyle = MarkerStyle.Circle;
+            X1X2.MarkerSize = 8;
+            X1X2.ChartType = SeriesChartType.Point;
+            X1X2.ChartType = SeriesChartType.Line;
+
+
+            XMid = chart1.Series.Add("XMid");
+            XMid.MarkerStyle = MarkerStyle.Circle;
+            X1X2.ChartType = SeriesChartType.Point;
+            X1X2.ChartType = SeriesChartType.Line;
+            XMid.MarkerSize = 8;
+
+            var thing = intervals.Dequeue();
+            x1 = thing.Item1;
+
+            timer6.Enabled = true;
+            timer6.Interval = 500;
+            timer6.Start();
         }
 
-        // ---------------------------------------------- SKENAVIMO METODAS -----------------------------------------
+        private void timer6_Tick(object sender, EventArgs e)
+        {
+            xtemp = G(x1);
+            x1 = xtemp;
+
+            if (Math.Abs(F(x1)) > 1e-6 & iii <= N)
+            {
+                X1X2.Points.Clear();
+                XMid.Points.Clear();
+
+                XMid.Points.AddXY(x1, 0);
+
+                richTextBox1.AppendText($" {iii,6:d}   {xtemp,12:f7}  {F(xtemp),12:f7} {x1,12:f7} {x2,12:f7} {F(x1),12:f7} {F(x2),12:f7}\n");
+
+                iii = iii + 1;
+            }
+            else
+            {
+                richTextBox1.AppendText($" {iii,6:d}   {xtemp,12:f7}  {F(xtemp),12:f7} {x1,12:f7} {x2,12:f7} {F(x1),12:f7} {F(x2),12:f7}\n");
+                richTextBox1.AppendText("Skaičiavimai baigti");
+                iii = 0;
+                if (intervals.Any())
+                {
+                    var thing = intervals.Dequeue();
+                    x1 = thing.Item1;
+                }
+                else
+                {
+                    timer6.Stop();
+                }
+            }
+        }
+
+        // ---------------------------------------------- INTERVALU SKENAVIMO METODAS -------------------------------
 
         private void button8_Click(object sender, EventArgs e)
         {
+            ClearForm();
 
+            double x = -8;
+            int i = 0;
+            if (comboBox1.SelectedIndex == 2)
+            {
+                //x = 0.01;
+                i = 1;
+            }
+            prepareForm();
+
+            richTextBox1.AppendText("Iteracija         x            F(x)        x1          x2          F(x1)         F(x2)       \n");
+
+            Fx = chart1.Series.Add("F(x)");
+            Fx.ChartType = SeriesChartType.Line;
+            for (; i < 300; i++)
+            {
+                Fx.Points.AddXY(x, F(x)); x = x + (2 * Math.PI) / 50;
+            }
+            Fx.BorderWidth = 3;
+
+            X1X2 = chart1.Series.Add("X1X2");
+            X1X2.MarkerStyle = MarkerStyle.Circle;
+            X1X2.MarkerSize = 8;
+            X1X2.ChartType = SeriesChartType.Point;
+            X1X2.ChartType = SeriesChartType.Line;
+
+
+            XMid = chart1.Series.Add("XMid");
+            XMid.MarkerStyle = MarkerStyle.Circle;
+            X1X2.ChartType = SeriesChartType.Point;
+            X1X2.ChartType = SeriesChartType.Line;
+            XMid.MarkerSize = 8;
+
+            var thing = intervals.Dequeue();
+            x1 = thing.Item1;
+            x2 = thing.Item2;
+
+            timer5.Enabled = true;
+            timer5.Interval = 50;
+            timer5.Start();
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            xtemp = x1 + stepSize;
+
+            if (Math.Abs(F(xtemp)) > 1e-6 & iii <= N)
+            {
+                X1X2.Points.Clear();
+
+                X1X2.Points.AddXY(x1, 0);
+                X1X2.Points.AddXY(xtemp, 0);
+
+                richTextBox1.AppendText($" {iii,6:d}   {xtemp,12:f7}  {F(xtemp),12:f7} {x1,12:f7} {x2,12:f7} {F(x1),12:f7} {F(x2),12:f7}\n");
+
+                if (Math.Sign(F(x1)) != Math.Sign(F(xtemp)))
+                {
+                    stepSize /= 10;
+                }
+                else
+                {
+                    x1 += stepSize;
+                }
+
+
+                iii = iii + 1;
+            }
+            else
+            {
+                richTextBox1.AppendText($" {iii,6:d}   {xtemp,12:f7}  {F(xtemp),12:f7} {x1,12:f7} {x2,12:f7} {F(x1),12:f7} {F(x2),12:f7}\n");
+                richTextBox1.AppendText("Skaičiavimai baigti");
+                iii = 0;
+                if (intervals.Any())
+                {
+                    var thing = intervals.Dequeue();
+                    x1 = thing.Item1;
+                    x2 = thing.Item2;
+                    stepSize = 0.1;
+                }
+                else
+                {
+                    timer5.Stop();
+                }
+            }
         }
 
         // ---------------------------------------------- STYGU METODAS ---------------------------------------------
@@ -341,7 +544,7 @@ namespace Pvz1
         private void Button6_Click(object sender, EventArgs e)
         {
             ClearForm(); // išvalomi programos duomenys
-            PreparareForm(-4, 5, -10, 10);
+            prepareForm();
             x1 = -3; // izoliacijos intervalo pradžia
             x2 = -2; // izoliacijos intervalo galas
             iii = 0; // iteraciju skaičius
@@ -384,7 +587,7 @@ namespace Pvz1
             k = (float)(Math.Abs(F(x1) / F(x2)));
             xtemp = (x1 + k * x2) / (1 + k);
 
-            if (Math.Abs(F(xtemp)) > 1e-7 & iii <= N)
+            if (Math.Abs(F(xtemp)) > 1e-6 & iii <= N)
             // tikrinama salyga, ar funkcijos absoliuti reiksme daugiau uz nustatyta (norima) 
             // tiksluma ir nevirsytas maksimalus iteraciju skaicius
             {
@@ -462,6 +665,25 @@ namespace Pvz1
             stepSize = 0.1;
             richTextBox1.Clear();
             chart1.Series.Clear();
+        }
+
+        /// <summary>
+        /// Paruosia grafiko forma atitinkamai funkcijai
+        /// </summary>
+        private void prepareForm()
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    PreparareForm(-5, 5, -5, 5);
+                    break;
+                case 1:
+                    PreparareForm(1, 15, -3, 3);
+                    break;
+                case 2:
+                    PreparareForm(-4, 4, -4, 4);
+                    break;
+            }
         }
     }
 }
